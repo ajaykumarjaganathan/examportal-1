@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna University - Exam Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .login-box {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            width: 300px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .login-box h2 {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #003366;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004080;
+        }
+        .captcha {
+            font-family: 'Courier New', monospace;
+            font-size: 20px;
+            letter-spacing: 2px;
+            background: #eee;
+            padding: 5px;
+            display: inline-block;
+        }
+        .announcement {
+            background-color: #fff8dc;
+            border-left: 5px solid #ffcc00;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Anna University, Chennai</h1>
+        <p>Office of the Controller of Examinations<br>Pre-Examination Monitoring System</p>
+    </div>
+
+    <div class="container">
+        <div class="login-box">
+            <h2>Institution Login</h2>
+            <form id="institutionLogin">
+                Institution Code: <input type="text" required><br>
+                Password: <input type="password" required><br>
+                Enter the Captcha: <span class="captcha">9X$Y2P</span><br>
+                <input type="text" placeholder="Enter Captcha" required><br>
+                <button type="button" onclick="fakeHack()">Login</button>
+                <a href="#" style="font-size: 12px;">Forgot Password?</a>
+            </form>
+        </div>
+
+        <div class="login-box">
+            <h2>Student Login</h2>
+            <form id="studentLogin">
+                Register Number: <input type="text" required><br>
+                Date of Birth: <input type="text" placeholder="DD-MM-YYYY" required><br>
+                Enter the Captcha: <span class="captcha">$$9T8H</span><br>
+                <input type="text" placeholder="Enter Captcha" required><br>
+                <button type="button" onclick="fakeHack()">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="announcement">
+        <p><strong>🌟 Kind Attention to the Institutions:</strong> Academic and Assessment Schedule - UG (PTJ) - APRIL/MAY 2025 Examinations (SEMESTER - VI) - <a href="#">Click Here</a></p>
+        <p><strong>🌟 Kind Attention to the Institutions:</strong> Academic and Assessment Schedule - B.ARCH(R-2017) AND M.B.A (SYRS INTER) (R2015)-APRIL/MAY 2025 Examinations (SEMESTER - X) - <a href="#">Click Here</a></p>
+    </div>
+
+    <div class="footer">
+        <p>Designed and developed by: National Informatics Centre, Chennai</p>
+        <p>Content owned & maintained by Office of the COE, Anna University, Chennai</p>
+        <p>Optimized for 1024 x 768 monitor resolution. Best Viewed with IE8+, Firefox 10+, Chrome 15+</p>
+    </div>
+
+    <script>
+        function fakeHack() {
+            alert("🚨 WARNING! Your device has been hacked by the Exam Department! 😱\n\n(Just kidding! This is a prank. 😆)");
+            document.body.innerHTML = `
+                <div style="text-align: center; padding: 50px; background: black; color: red; font-family: monospace;">
+                    <h1>⚠️ SYSTEM HACKED ⚠️</h1>
+                    <p>Your exam records are being deleted...</p>
+                    <p style="font-size: 60px;">😈</p>
+                    <p>Just kidding! Relax, it's a prank! 🤣</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
